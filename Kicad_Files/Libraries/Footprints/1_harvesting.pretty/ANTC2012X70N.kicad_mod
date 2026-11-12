@@ -1,0 +1,203 @@
+(footprint "ANTC2012X70N"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Antenna")
+	(tags "Antenna")
+	(property "Reference" "ANT**"
+		(at 0.02 -2.23 0)
+		(layer "F.SilkS")
+		(uuid "f2501f30-f938-47b6-99e8-862838c72b1d")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "ANTC2012X70N"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "46111903-a413-4ba7-9f42-05db0dce2e55")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "db017c7b-8152-4d31-ac7e-7449acf272ea")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "378cf341-03eb-4ea3-a5e2-ba8a29624fc0")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_rect
+		(start -1.72 -1.125)
+		(end -1.71 1.125)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "09300292-f693-49ae-a01c-9bd2c383bd92")
+	)
+	(fp_circle
+		(center -2.061246 0.01)
+		(end -2.241246 0.1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "24582ba1-0d65-4fd6-97b2-f915757d6039")
+	)
+	(fp_line
+		(start -1.9 -1.175)
+		(end 1.9 -1.175)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "3d7c2e78-3e34-48ac-a345-87e4b30e80ab")
+	)
+	(fp_line
+		(start -1.9 1.175)
+		(end -1.9 -1.175)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "10dc4dcf-f8e2-41b2-8b63-c05ef964d5e2")
+	)
+	(fp_line
+		(start 1.9 -1.175)
+		(end 1.9 1.175)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "be1d6a35-f800-4f8a-b1be-ef9247a14759")
+	)
+	(fp_line
+		(start 1.9 1.175)
+		(end -1.9 1.175)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "6e0b2dbc-073e-4be0-9c11-a1a4b6ea8271")
+	)
+	(fp_line
+		(start -1 -0.625)
+		(end 1 -0.625)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "c02db0df-1c15-4251-9c67-68ece3b51c4d")
+	)
+	(fp_line
+		(start -1 -0.025)
+		(end -0.4 -0.625)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "9eca5aa4-18d3-43e7-8e18-dffbf88c2285")
+	)
+	(fp_line
+		(start -1 0.625)
+		(end -1 -0.625)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "534cfbcd-948e-46d3-90c3-164c7eb27e9a")
+	)
+	(fp_line
+		(start 1 -0.625)
+		(end 1 0.625)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d22440c4-4218-4c8f-9faf-bb1468ace329")
+	)
+	(fp_line
+		(start 1 0.625)
+		(end -1 0.625)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d75d9f85-9795-453b-8b71-ccc209857572")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "fa096fb8-db97-4403-8709-23505a75f9a2")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -0.85 0)
+		(size 1.2 1.45)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "ba962b10-9e19-414d-9bf1-5573efbd4b86")
+	)
+	(pad "2" smd rect
+		(at 0.85 0)
+		(size 1.2 1.45)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "9eb539c3-dee3-4ad0-b819-ec40dd23a70b")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../Libraries/3D/ACAG0201-2450-T.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
+)

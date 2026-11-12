@@ -1,0 +1,203 @@
+(footprint "Diode_RB751S40T1G"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "SOD-523 CASE 502")
+	(tags "Diode")
+	(property "Reference" "D**"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "0bc80b01-fc6f-4f44-860e-86991dbd164d")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "SODFL1608X70N"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "4d004792-0dda-4bb8-b4d6-c857059df193")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4708c50b-5b0b-4341-91fd-a09e9c24885e")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6e12539a-f034-4446-9d6a-9754c93698fb")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MPN" "RB751S40T1G"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "3d12a74f-b15c-4f9b-95e3-77d4c43aeb46")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -1.07 -0.4)
+		(end 0.6 -0.4)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "acb7ae48-247d-4446-bcb3-0897e8f71465")
+	)
+	(fp_line
+		(start -0.6 0.4)
+		(end 0.6 0.4)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d5a6f193-3418-4d94-9f84-2b8d76a756d2")
+	)
+	(fp_line
+		(start -1.22 -0.6)
+		(end 1.22 -0.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "3263d295-8b48-4aba-82a0-5ef3863967ac")
+	)
+	(fp_line
+		(start -1.22 0.6)
+		(end -1.22 -0.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e4c45ed8-d825-4bc2-bd28-aa4883a76093")
+	)
+	(fp_line
+		(start 1.22 -0.6)
+		(end 1.22 0.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "085950df-688a-4a46-9269-f1f34bc07bdb")
+	)
+	(fp_line
+		(start 1.22 0.6)
+		(end -1.22 0.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "2abdc596-00cc-4b7f-9d2c-03baf032b0fb")
+	)
+	(fp_line
+		(start -0.6 -0.4)
+		(end 0.6 -0.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "c6b6fc4d-0c83-4c7a-b5d2-706ef0b57e5e")
+	)
+	(fp_line
+		(start -0.6 -0.08)
+		(end -0.28 -0.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "cf2a671f-9427-47cf-8240-75c037fbdd2f")
+	)
+	(fp_line
+		(start -0.6 0.4)
+		(end -0.6 -0.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "58c5c963-c47c-4c18-b0bf-4e81767723a7")
+	)
+	(fp_line
+		(start 0.6 -0.4)
+		(end 0.6 0.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "dea91a3a-913d-4012-9c2e-dcfd020414f2")
+	)
+	(fp_line
+		(start 0.6 0.4)
+		(end -0.6 0.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "6f764b7d-3077-4ce0-992a-05881848f95b")
+	)
+	(pad "1" smd rect
+		(at -0.75 0 90)
+		(size 0.42 0.64)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "92aa784d-e875-4f26-99dc-8377cbe4f2c0")
+	)
+	(pad "2" smd rect
+		(at 0.75 0 90)
+		(size 0.42 0.64)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "008bd763-ca67-4441-a000-96b856b8585e")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../Libraries/3D/Diode_RB751S40T1G.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

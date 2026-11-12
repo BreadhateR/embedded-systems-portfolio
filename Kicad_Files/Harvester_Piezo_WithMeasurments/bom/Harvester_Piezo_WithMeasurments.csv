@@ -1,0 +1,21 @@
+"","Sourced","Placed","References","Value","Footprint","Description","MPN","Quantity"
+1,"✓","","C4, C8","10nF","C_0402_1005Metric_Pad0.74x0.62mm_HandSolder","Multilayer Ceramic Capacitors MLCC - SMD/SMT 0.01 uF 35 VDC 2% 0402 C0G (NP0)","GRM1555CYA103GE01J",2
+2,"✓","","C1","10uF","C_0402_1005Metric_Pad0.74x0.62mm_HandSolder","Unpolarized capacitor","GRM155R60J106ME15D",1
+3,"✓","","C2","22uF","C_0603_1608Metric","Unpolarized capacitor","GRM188R61A226ME15D",1
+4,"✓","","C3","100nF",704,"Unpolarized capacitor","GRMJN65C1H104JE01J",1
+5,"✓","","C5","22uF","C_0603_1608Metric","Unpolarized capacitor","MLASL168BB5226MTNA01",1
+6,"✓","","C6","0.1uF","C_0402_1005Metric_Pad0.74x0.62mm_HandSolder","Multilayer Ceramic Capacitors MLCC - SMD/SMT CGA 0402 16V 0.1uF X5R 20% AEC-Q200","CGA2B2X5R1C104M050BA",1
+7,"✓","","R1, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, Rw1",0,"R_01005_0402Metric","Thick Film Resistors - SMD General Purpose Chip Resistor 0201, 0Ohms, 5%, 1/20W","RC0201JR-130RL",12
+8,"✓","","R3, R4","1K","R_0402_1005Metric_Pad0.72x0.64mm_HandSolder","Thin Film Resistors - SMD 1KOhms 0402 25ppm 0.1% Precision AEC-Q200","RNCF0402BTE1K00",2
+9,"✓","","R15, R19","1M","R_0402_1005Metric_Pad0.72x0.64mm_HandSolder","Thick Film Resistors - SMD General Purpose Chip Resistor 0402, 1MOhms, 1%, 1/16W","RC0402FR-071MP",2
+10,"✓","","R2",30,"R_0402_1005Metric_Pad0.72x0.64mm_HandSolder","Thin Film Resistors - SMD -  0.1 % - 30 Ohms -  0402","RT0402BRE0730RL",1
+11,"✓","","R16","6.8M","R_0402_1005Metric_Pad0.72x0.64mm_HandSolder","Thick Film Resistors - SMD General Purpose Chip Resistor 0402, 6.8MOhms, 1%, 1/16W","RC0402FR-076M8L",1
+12,"✓","","R17","3.3M","R_0402_1005Metric_Pad0.72x0.64mm_HandSolder","Thick Film Resistors - SMD 1/16watt 3.3Mohms 1% Commercial Use","CRCW04023M30FKEDC",1
+13,"✓","","L1","10uH","DFE252010F-100M=P2","Inductor","DFE252010F-100M=P2",1
+14,"✓","","D3, D4","RB751S40T1G","Diode_RB751S40T1G","Schottky Dioden & Gleichrichter 40V 200mW Single","RB751S40T1G",2
+15,"✓","","D1","D_Zener","SODFL1608X70N","Zener Diodes 5.6V 200mW","MM5Z5V6T1G",1
+16,"✓","","IC1","AEM30300-QFN","AEM30300","Power Management Specialized - PMIC Highly Versatile Buck-Boost Ambient Energy Manager Battery Charger For AC/DC Sources","120-AEM30300-QFN",1
+17,"✓","","IC2","INA190A4IRSWR","QFN40P140X180X55-10N","40V, Bi-Directional, Low-/High-Side, Zero-Drift, Voltage Output CSA w/low bias current and enable","INA190A3IRSWR",1
+18,"✓","","Q1","NMOS","SOT-523","N-MOSFET transistor, drain/source/gate","DMN2310UTQ-7",1
+19,"✓","","J1","FH34SRJ-7S-0.5SH_50_","FH34SRJ7S05SH50","7 Position FFC, FPC Connector Contacts, Top and Bottom 0.020"" (0.50mm) Surface Mount, Right Angle","  FH34SRJ-7S-0.5SH(50)",1
+20,"✓","","J2","CONMHF4-SMD-G-T","CONMHF4-SMD-G-T","","CONMHF4-SMD-G-T",1

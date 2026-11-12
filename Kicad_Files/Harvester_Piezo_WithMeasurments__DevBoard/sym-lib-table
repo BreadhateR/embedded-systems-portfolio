@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "1_harvesting")(type "KiCad")(uri "${KIPRJMOD}/../Libraries/Symbols/1_harvesting.kicad_sym")(options "")(descr ""))
+)

@@ -1,0 +1,171 @@
+(footprint "SC16S7PF20PPM"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "SC16S-7PF20PPM-1")
+	(tags "Crystal or Oscillator")
+	(property "Reference" "Y**"
+		(at -0.08 -2.51 0)
+		(layer "F.SilkS")
+		(uuid "0c1ab1f8-68fb-4a38-8db7-2f6ea2026a89")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "SC16S7PF20PPM"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "bb4ccad1-f1e7-47b1-a405-ca1ac2ca3dba")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ae590a02-893b-4713-9211-3f4e42998abf")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "fce18f9d-ef53-4a58-8e9f-d6de31a3804f")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -1.8 -1.5)
+		(end 1.8 -1.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "9078a4ef-131a-4e2e-9265-5dcb7ebacb4c")
+	)
+	(fp_line
+		(start -1.8 1.5)
+		(end -1.8 -1.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "02dfc156-c717-4076-b2c9-7bb336874083")
+	)
+	(fp_line
+		(start 1.8 -1.5)
+		(end 1.8 1.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "7b68edf4-abbb-47db-8925-6958b13a191a")
+	)
+	(fp_line
+		(start 1.8 1.5)
+		(end -1.8 1.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "8e0286a9-c33a-4ce0-b23a-e2357d426f5d")
+	)
+	(fp_line
+		(start -0.8 -0.5)
+		(end 0.8 -0.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "422af9d7-5cf0-4444-8a5d-b8bf04e13103")
+	)
+	(fp_line
+		(start -0.8 0.5)
+		(end -0.8 -0.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "0829e655-f762-41eb-85f5-fec39867f850")
+	)
+	(fp_line
+		(start 0.8 -0.5)
+		(end 0.8 0.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "9fa75935-3478-4d08-aeff-62d19de8287a")
+	)
+	(fp_line
+		(start 0.8 0.5)
+		(end -0.8 0.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "bbce5454-e04b-45de-8f2a-9945184d1f4b")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "d7252d6e-233f-41e6-847d-9174ddd01c50")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -0.55 0)
+		(size 0.5 1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "222195ce-a5ba-4d15-8f85-a182955ce80e")
+	)
+	(pad "2" smd rect
+		(at 0.55 0)
+		(size 0.5 1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "2e514899-e6e7-4c1b-b0c0-1c630a5f2031")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../Libraries/3D/SC16S-7PF20PPM.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
+)

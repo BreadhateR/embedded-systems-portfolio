@@ -1,0 +1,211 @@
+(footprint "744025220_Coil"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Tiny Power Inductor, body 2.8x2.8mm, https://www.we-online.com/catalog/en/WE-TPC#/articles/WE-TPC-2828")
+	(tags "SMT Shielded")
+	(property "Reference" "REF**"
+		(at 0 -2.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "72f04c79-3482-4b2f-9c2e-55d56c0ad165")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "744025220_Coil"
+		(at 0 2.6 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e08f566d-cff8-45c7-9079-1320768f6f16")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "987709c2-a4af-40ef-adac-431939e964f1")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f4d5c4b8-6050-4f13-a6ba-6ea62e437005")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -1.4 -1.86)
+		(end 1.4 -1.86)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "77acdcca-aba4-4a8d-a9d2-2968d13cd679")
+	)
+	(fp_line
+		(start -1.4 1.86)
+		(end 1.4 1.86)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "db8e694c-b8d5-4576-940a-8653119813e1")
+	)
+	(fp_rect
+		(start -1.85 -1.85)
+		(end 1.85 1.85)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "9ee0780c-adf7-46dd-b0da-6ebbcc36dfa3")
+	)
+	(fp_line
+		(start -1.4 -0.6)
+		(end -1.4 0.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4c4261e8-c754-4b4d-aa90-bea42d58036d")
+	)
+	(fp_line
+		(start -1.4 0.6)
+		(end -0.6 1.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d7da18dd-a854-45d4-93b0-b2fe48c1a81c")
+	)
+	(fp_line
+		(start -0.6 -1.4)
+		(end -1.4 -0.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4d4fecdd-be4a-47e9-9085-2268d5852d8f")
+	)
+	(fp_line
+		(start -0.6 -1.4)
+		(end 0.6 -1.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e0bb0d8f-70a7-47f5-8aac-0fda9ca4dd54")
+	)
+	(fp_line
+		(start -0.6 1.4)
+		(end 0.6 1.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "98d9016d-1c99-4bc4-b71b-1eafcd481d98")
+	)
+	(fp_line
+		(start 0.6 -1.4)
+		(end 1.4 -0.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f73b5500-6337-4860-a114-6e307f65ec9f")
+	)
+	(fp_line
+		(start 0.6 1.4)
+		(end 1.4 0.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e0a04cd4-6e8d-4b49-a547-ca35d38cc6fb")
+	)
+	(fp_line
+		(start 1.4 -0.6)
+		(end 1.4 0.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "59b14258-31b5-4079-85d3-47f58163dcbe")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "1b0584c7-33fa-4426-8b5f-687217ccbef4")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.075)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -1.05 0)
+		(size 0.88 2.9)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0)
+		(chamfer_ratio 0.5)
+		(chamfer top_left bottom_left)
+		(uuid "b0651a18-f829-4954-8869-32bff50db4c5")
+	)
+	(pad "2" smd roundrect
+		(at 1.05 0)
+		(size 0.9 2.9)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0)
+		(chamfer_ratio 0.5)
+		(chamfer top_right bottom_right)
+		(uuid "ef536099-a2bc-4645-b7fd-fb6c3e07f94f")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../Libraries/3D/744025220_Coil.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
