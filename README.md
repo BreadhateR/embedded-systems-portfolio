@@ -55,5 +55,3 @@ Open a project's `.kicad_pro` file in **KiCad** to inspect its schematic and PCB
 
 The existing SiSmaK sensor electronics, flexible PCB, and overall bolt concept formed the integration baseline. The harvesting modules and associated firmware/measurement work documented here extend that system; they do not represent development of the complete SiSmaK platform. 
 
-
-The experiments demonstrated solar-powered measurement and wireless transmission under sufficiently strong artificial illumination, phased operation with a **150 µF capacitor**, and about **40 mW maximum NFC output at 1 cm coil spacing** in the tested aluminium-bolt setup. The project pages state the relevant conditions and limitations. Circuit development used **KiCad 9** and **LTspice**; validation used SMU load sweeps, **Nordic PPK2**, an oscilloscope, and **NanoVNA** impedance measurements. Firmware and host-program behavior are described in the thesis; their source code is not included in this repository.

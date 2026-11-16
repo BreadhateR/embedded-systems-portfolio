@@ -33,7 +33,7 @@ The approximately 13 mm, four-layer PCB was designed in **KiCad 9**. Components 
 
 ## Schematics
 
-The schematic includes the antenna tuning network, NTAG 5 Link, LM66100 output path, and FPC interface. NanoVNA impedance measurements guided tuning toward **13.56 MHz**: adding **20 pF** moved the measured imaginary-impedance zero crossing from about **14.7 MHz** toward the target frequency (thesis §6.3). The final tuning depends on the antenna and surrounding assembly.
+The schematic includes the antenna tuning network, NTAG 5 Link, LM66100 output path, and FPC interface. 
 
 ## Hardware Design Documentation
 
@@ -54,7 +54,7 @@ The KiCad schematic and PCB design files are included for further inspection.
 
 The thesis reports tuning of the assembled receiver and SMU output-load sweeps (§§6.3–6.4). With identical facing coils, a CLRC663-plus reader, and a receiver on an aluminium M20 bolt head, maximum output reached about **40 mW at 1 cm** in high-field mode. Low-field mode produced about **22–23 mW over 0.5–1.5 cm**. The receiver sat above nonmetallic filling without ferrite.
 
-These are load-sweep maxima for the tested geometry, not guaranteed continuous power or end-to-end efficiency. Steel-bolt performance and a complete NFC-powered sensing/transmission cycle are not established by these measurements; an exact as-built BOM is not supplied.
+
 
 ---
 
