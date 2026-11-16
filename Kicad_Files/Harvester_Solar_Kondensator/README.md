@@ -1,25 +1,24 @@
 # SiSmaK Solar Energy Harvesting Module – Capacitor
 
-Custom-designed photovoltaic energy harvesting module for **[SiSmaK](https://www.spp2305.de/sismak/)** (sensor-integrating machine elements). The compact circular PCB connects to the existing SiSmaK electronics via a **flexible printed circuit (FPC)** and provides capacitor-based energy storage for intermittent operation.
+Photovoltaic power-supply design for the existing **[SiSmaK](https://www.spp2305.de/sismak/)** sensor-integrated M20 bolt. The circular PCB connects through an **FPC interface** and accumulates energy in a capacitor before enabling the load. It addresses the repeated startup attempts observed when the battery-buffered supply could not meet MCU boot demand.
 
-The project covers schematic design, component selection, power management circuitry, and PCB layout for integration into the limited installation space of the sensor-integrating bolt.
+Development covered storage sizing, AEM10300 configuration, a transistor output gate, and PCB layout within the approximately 13 mm installation envelope.
 
 ## Hardware Features
 
 - **Energy Harvesting IC:** e-peas AEM10300
 - **Energy Source:** External photovoltaic cells
-- **Energy Harvesting:** Photovoltaic energy conversion and power management
-- **Energy Storage:** Capacitor-based energy buffer
-- **Power Management:** Inductive DC-DC conversion with configurable operating parameters
-- **Operating Concept:** Harvest–Store–Use for intermittent operation
+- **Operating Point:** FOCV tracking configured to 80% of open-circuit voltage
+- **Energy Storage:** 150 µF nominal tantalum capacitor
+- **Operating Concept:** Storage-controlled startup, developed toward Harvest–Store–Partial–Use operation
 - **System Interface:** FPC connection to the existing SiSmaK electronics
 - **Form Factor:** Compact circular PCB for space-constrained integration
 
 ### Photovoltaic Energy Harvesting
 
-The AEM10300 harvests electrical energy from external photovoltaic cells. The circuit integrates the required passive components and configuration connections for energy harvesting and power management.
+The AEM10300 charges the storage capacitor. Its ST_STO signal controls a PMOS supply switch through an NMOS driver, keeping the SiSmaK load disconnected during initial charging. The output-gate behavior was investigated in **LTspice**.
 
-Unlike the battery-based variant, the harvested energy is temporarily stored in a capacitor. Once sufficient energy is available, the stored energy can be used for a SiSmaK measurement and wireless communication cycle.
+The initial energy estimate of about 530 µJ per measurement/transmission cycle led to selection of a 150 µF capacitor. Subsequent system measurements showed that boot and longer ADC acquisition required more energy than assumed. The operating concept therefore evolved into **Harvest–Store–Partial–Use**: boot once, retain RAM, and recharge during sleep between individual tasks. 
 
 ### SiSmaK Integration
 
@@ -27,7 +26,7 @@ The module was designed as an add-on to the existing SiSmaK electronics rather t
 
 ## PCB Design
 
-The PCB was designed using **KiCad 9**, including schematic capture, component placement, and PCB routing.
+The approximately 13 mm, four-layer PCB was designed in **KiCad 9**. Two-sided component placement accommodates the storage capacitor and output gate; the FPC connector is on the reverse side.
 
 ### PCB View
 
@@ -61,7 +60,7 @@ The KiCad schematic and PCB design files are included for further inspection.
 
 ## Project Status
 
-PCB design documented. Manufacturing and hardware validation status are not specified here.
+The thesis documents storage sizing, circuit design, and simulated output switching (§4.2.2). Experimental validation of the phased operating concept is reported with the piezoelectric capacitor supply (§5.3.2). 
 
 ---
 

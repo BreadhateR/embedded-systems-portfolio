@@ -1,29 +1,29 @@
 # SiSmaK NFC Energy Harvesting Module
 
-Custom-designed NFC energy harvesting module for **[SiSmaK](https://www.spp2305.de/sismak/)** (sensor-integrating machine elements). The compact circular PCB is designed to connect to the existing SiSmaK electronics via a **flexible printed circuit (FPC)**, providing an interface for NFC-based energy transfer.
+NFC power-receiver module developed for the existing **[SiSmaK](https://www.spp2305.de/sismak/)** sensor-integrated M20 bolt. The circular PCB converts energy from an external reader field into a DC supply and connects to the existing electronics through an **FPC interface**.
 
-The project covers schematic design, component selection, antenna tuning circuitry, and PCB layout for integration into the limited installation space of the sensor-integrating bolt.
+Development covered harvesting-IC selection, reverse-current blocking, compact PCB layout, experimental antenna adjustment, and characterization of output power versus coil spacing and harvesting mode.
 
 ## Hardware Features
 
-- **NFC IC:** NXP NTAG 5 Link (NTP5332)
+- **NFC IC:** NXP NTAG 5 Link (`NTP53121G0JHKZ` in the schematic and PCB)
 - **Energy Harvesting:** NFC field energy converted to a DC output
 - **Antenna Interface:** External antenna via MHF4 connector with tuning capacitors
-- **Power Path:** LM66100 ideal-diode controller for output power-path control
+- **Power Path:** LM66100 ideal-diode stage to block storage discharge into the harvesting output
 - **System Interface:** FPC connection to the existing SiSmaK electronics, exposing power and control/data signals
 - **Form Factor:** Compact circular PCB for space-constrained integration
 
 ### NFC Energy Harvesting
 
-The NTAG 5 Link provides an NFC interface with energy harvesting capability. An antenna matching/tuning network connects the external NFC antenna to the IC, while the harvested voltage is routed through the output power path.
+The NTAG 5 Link was selected for its energy-harvesting capability. The external antenna and tuning network feed the IC; the LM66100 then routes harvested energy toward the system while blocking reverse current. This is necessary because, without an NFC field, the tag pulls VOUT to ground and could otherwise discharge an attached energy buffer.
 
 ### SiSmaK Integration
 
-The module was designed as an add-on to the existing SiSmaK electronics rather than a standalone development board. Its FPC interface provides the electrical connection to the sensor-integrating bolt system.
+The module uses an existing institute-developed antenna coil mounted on the bolt head. The harvesting PCB and power path are the thesis contribution; the coil and SiSmaK sensor electronics are the integration baseline. The FPC routes harvested supply, I²C, and event signals; these connections do not by themselves establish implemented NFC application firmware.
 
 ## PCB Design
 
-The PCB was designed using **KiCad 9**, including schematic capture, component placement, and PCB routing.
+The approximately 13 mm, four-layer PCB was designed in **KiCad 9**. Components are placed on the front, with additional measurement pads on the reverse for antenna adjustment.
 
 ### PCB View
 
@@ -32,6 +32,8 @@ The PCB was designed using **KiCad 9**, including schematic capture, component p
 </p>
 
 ## Schematics
+
+The schematic includes the antenna tuning network, NTAG 5 Link, LM66100 output path, and FPC interface. NanoVNA impedance measurements guided tuning toward **13.56 MHz**: adding **20 pF** moved the measured imaginary-impedance zero crossing from about **14.7 MHz** toward the target frequency (thesis §6.3). The final tuning depends on the antenna and surrounding assembly.
 
 ## Hardware Design Documentation
 
@@ -50,7 +52,9 @@ The KiCad schematic and PCB design files are included for further inspection.
 
 ## Project Status
 
-PCB design documented. Manufacturing and hardware validation status are not specified here.
+The thesis reports tuning of the assembled receiver and SMU output-load sweeps (§§6.3–6.4). With identical facing coils, a CLRC663-plus reader, and a receiver on an aluminium M20 bolt head, maximum output reached about **40 mW at 1 cm** in high-field mode. Low-field mode produced about **22–23 mW over 0.5–1.5 cm**. The receiver sat above nonmetallic filling without ferrite.
+
+These are load-sweep maxima for the tested geometry, not guaranteed continuous power or end-to-end efficiency. Steel-bolt performance and a complete NFC-powered sensing/transmission cycle are not established by these measurements; an exact as-built BOM is not supplied.
 
 ---
 

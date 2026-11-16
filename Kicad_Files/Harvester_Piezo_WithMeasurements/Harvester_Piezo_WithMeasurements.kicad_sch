@@ -8760,7 +8760,7 @@
 			(color 0 0 0 0.0000)
 		)
 		(uuid "d5d00c73-f4bb-4537-879c-bba59f8d0149")
-		(property "Sheetname" "Current Measurment"
+		(property "Sheetname" "Current Measurement"
 			(at 45.72 17.0684 0)
 			(effects
 				(font
@@ -8769,7 +8769,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "Current_Measurment.kicad_sch"
+		(property "Sheetfile" "Current_Measurement.kicad_sch"
 			(at 45.72 46.3046 0)
 			(effects
 				(font
@@ -8839,7 +8839,7 @@
 			)
 		)
 		(instances
-			(project "Harvester_Piezo_WithMeasurments"
+			(project "Harvester_Piezo_WithMeasurements"
 				(path "/d06dd1b2-1ade-430b-abdf-9c74a1965102"
 					(page "2")
 				)

@@ -1,15 +1,15 @@
-# nRF54L15 Custom Development Board
+# Nordic nRF54L Custom Development Board
 
-Custom-designed development board based on the **Nordic Semiconductor nRF54L15** microcontroller, developed for embedded firmware development, hardware prototyping, and peripheral testing.
+Custom Nordic MCU development-board design for firmware prototyping, peripheral access, and debugging. The supplied schematic and PCB specify **`NRF54L15-QFAA-R`**; 
 
-The project covers schematic design, component selection, PCB layout, and integration of essential debugging and peripheral interfaces.
+Development covered the MCU support circuit, supply filtering and decoupling, clock components, RF network, schematic capture, and PCB layout. This is a separate board design; it is not the existing flexible SiSmaK electronics.
 
 ## Hardware Features
 
-- **Microcontroller:** Nordic Semiconductor nRF54L15
-- **Wireless Connectivity:** 2.4 GHz RF interface with an external antenna and discrete RF matching network
+- **Microcontroller:** Nordic nRF54L15 in the supplied Value/MPN fields
+- **RF Circuit:** Discrete matching network and ACAG0201-2450-T chip antenna
 - **Clocking:** External high-frequency crystal oscillator
-- **Power Supply:** Direct external supply with MCU decoupling and filtering.
+- **Power Supply:** Direct external supply with MCU decoupling and filtering
 - **Debugging:** SWD interface for programming and debugging
 - **GPIO Expansion:** Pin headers providing access to MCU GPIOs and peripheral interfaces
 - **User Interface:** Reset button, user button, and two status LEDs
@@ -17,13 +17,13 @@ The project covers schematic design, component selection, PCB layout, and integr
 
 ### Debugging and Peripheral Access
 
-The board provides SWD connections for firmware programming and debugging. Additional pin headers expose GPIO signals and configurable peripheral interfaces for external hardware integration.
+SWDIO, SWDCLK, and reset connections provide programming/debug access. Pin headers expose GPIOs, including signals labelled for peripheral buses, so external circuits can be connected without modifying the PCB.
 
-Two LEDs and user-accessible buttons support firmware development and functional testing.
+Two LEDs, a user button, and a reset button provide local controls and status outputs. These are hardware provisions; tested firmware drivers and peripheral functionality are not documented for this board.
 
 ## PCB Design
 
-The PCB was designed using **KiCad 9**, including schematic capture, component placement, and PCB routing.
+The four-layer PCB was designed using **KiCad 9**. The project includes custom design rules alongside the schematic and layout.
 
 ### PCB Layout
 
@@ -33,7 +33,7 @@ The PCB was designed using **KiCad 9**, including schematic capture, component p
 
 ## Schematics
 
-The complete schematic is available as a PDF:
+The existing hardware PDF export is available here:
 
 [View Schematic (PDF)](Hardware_Design.pdf)
 
@@ -43,15 +43,13 @@ The original KiCad project files are also included for further inspection.
 
 | File | Description |
 |---|---|
-| [`MCU_Board.kicad_pro`](kicad/MCU_Board.kicad_pro) | KiCad project |
-| [`MCU_Board.kicad_sch`](kicad/MCU_Board.kicad_sch) | Main schematic |
-| [`MCU.kicad_sch`](kicad/MCU.kicad_sch) | MCU schematic sheet |
-| [`MCU_Board.kicad_pcb`](kicad/MCU_Board.kicad_pcb) | PCB layout |
-| [`MCU_Board.kicad_dru`](kicad/MCU_Board.kicad_dru) | Custom design rules |
+| [`MCU_Board.kicad_pro`](MCU_Board.kicad_pro) | KiCad project |
+| [`MCU_Board.kicad_sch`](MCU_Board.kicad_sch) | Main schematic |
+| [`MCU.kicad_sch`](MCU.kicad_sch) | MCU schematic sheet |
+| [`MCU_Board.kicad_pcb`](MCU_Board.kicad_pcb) | PCB layout |
+| [`MCU_Board.kicad_dru`](MCU_Board.kicad_dru) | Custom design rules |
 
-## Project Status
 
-Hardware design completed. Manufacturing and hardware validation status are not documented in this repository.
 
 ---
 

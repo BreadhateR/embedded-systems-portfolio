@@ -1,26 +1,26 @@
 # SiSmaK Piezoelectric Energy Harvesting Module – Capacitor
 
-Custom-designed piezoelectric energy harvesting module for **[SiSmaK](https://www.spp2305.de/sismak/)** (sensor-integrating machine elements). The compact circular PCB connects to the existing SiSmaK electronics via a **flexible printed circuit (FPC)** and provides capacitor-based energy storage for intermittent operation.
+Capacitor-buffered ultrasonic supply design for the existing **[SiSmaK](https://www.spp2305.de/sismak/)** sensor-integrated M20 bolt. The circular PCB connects through an **FPC interface**, stores energy from an external piezoelectric receiver, and delays load connection until sufficient storage voltage is available.
 
-The project covers schematic design, component selection, piezoelectric rectification, power management circuitry, and PCB layout for integration into the limited installation space of the sensor-integrating bolt.
+Development combined rectification and storage circuitry, a controlled output path, compact PCB layout, and firmware adaptations that divide sensor acquisition into tasks separated by recharge pauses.
 
 ## Hardware Features
 
-- **Energy Harvesting IC:** e-peas AEM30300
+- **Energy Harvesting IC:** AEM30300 in the thesis architecture; supplied IC1 fields are inconsistent (see Project Status)
 - **Energy Source:** External piezoelectric transducer
 - **Piezoelectric Input:** External transducer connection via MHF4 connector
 - **Rectification:** Greinacher voltage-doubler circuit using Schottky diodes
-- **Energy Storage:** Capacitor-based energy buffer
+- **Energy Storage:** 150 µF nominal capacitor
 - **Power Management:** Inductive DC-DC conversion and storage-voltage monitoring
-- **Operating Concept:** Harvest–Store–Use for intermittent operation
+- **Operating Concept:** Harvest–Store–Partial–Use, retaining RAM during sleep/recharge pauses
 - **System Interface:** FPC connection to the existing SiSmaK electronics
 - **Form Factor:** Compact circular PCB for space-constrained integration
 
 ### Piezoelectric Energy Harvesting
 
-The external piezoelectric transducer generates an alternating electrical signal under mechanical excitation. A Greinacher voltage-doubler circuit rectifies the signal before it is supplied to the AEM30300 energy harvesting IC.
+The piezoelectric receiver generates AC under externally driven ultrasonic excitation. A Greinacher voltage doubler rectifies the signal, and the harvesting stage transfers energy to the capacitor.
 
-The AEM30300 manages the harvested energy and charges a capacitor. Once sufficient energy has accumulated, the stored energy can be used for a SiSmaK measurement and wireless communication cycle. The circuit also includes a controlled output path for supplying the connected electronics.
+An ST_STO-controlled PMOS/NMOS output gate keeps the load disconnected during initial charging. Once enabled, the MCU boots and performs individual strain-gauge measurements, entering sleep between tasks while the capacitor recharges. Maintaining the MCU supply preserves RAM and avoids another energy-intensive boot.
 
 ### SiSmaK Integration
 
@@ -28,7 +28,7 @@ The module was designed as an add-on to the existing SiSmaK electronics rather t
 
 ## PCB Design
 
-The PCB was designed using **KiCad 9**, including schematic capture, component placement, and PCB routing.
+The approximately 13 mm, four-layer PCB was designed in **KiCad 9**. Two-sided placement accommodates the rectifier, storage, and output-control circuitry; the FPC connector is on the reverse side.
 
 ### PCB View
 
@@ -62,7 +62,8 @@ The KiCad schematic and PCB design files are included for further inspection.
 
 ## Project Status
 
-PCB design documented. Manufacturing and hardware validation status are not specified here.
+The thesis demonstrates phased operation with **150 µF storage** (§5.3.2): charging to about 3.3 V followed by successful MCU boot, with capacitor voltage falling to about 1.7 V. PPK2 recordings, GPIO timing markers, and oscilloscope measurements linked individual tasks to energy use and storage-voltage changes. Reported boot energy was about **0.58 mJ over 24.5 ms**; individual strain-gauge channels required about **0.30 mJ over 14 ms**.
+
 
 ---
 

@@ -1,16 +1,16 @@
 # SiSmaK Piezoelectric Energy Harvesting Module – Battery
 
-Custom-designed piezoelectric energy harvesting module for **[SiSmaK](https://www.spp2305.de/sismak/)** (sensor-integrating machine elements). The compact circular PCB is designed to connect to the existing SiSmaK electronics via a **flexible printed circuit (FPC)**, providing an energy harvesting interface for battery-based power supply.
+Ultrasonic power-receiver module developed for the existing **[SiSmaK](https://www.spp2305.de/sismak/)** sensor-integrated M20 bolt. A piezoelectric receiver converts externally generated ultrasound transmitted through a metallic structure into electrical energy. The circular PCB rectifies and manages this energy, connecting through an **FPC interface** to the existing electronics and rechargeable cell.
 
-The project covers schematic design, component selection, piezoelectric AC-DC rectification, power management circuitry, and PCB layout for integration into the limited installation space of the sensor-integrating bolt.
+Development covered rectifier selection and dimensioning, energy-management configuration, compact PCB layout, and experimental investigation of frequency and electrical load. The tested energy source was an actively driven ultrasonic transmitter.
 
 ## Hardware Features
 
 - **Energy Harvesting IC:** e-peas AEM30300
-- **Energy Source:** External piezoelectric transducer
-- **Rectification:** Greinacher voltage doubler using Schottky diodes and capacitors
-- **Energy Harvesting:** Piezoelectric energy conversion and power management
-- **Energy Storage:** Battery-based energy storage architecture
+- **Energy Source:** External piezoelectric receiver
+- **Rectification:** Greinacher voltage doubler with RB751S40 Schottky diodes and a 100 nF pump capacitor
+- **Load Adjustment:** Accessible ZMPP resistor setting for experimental tuning
+- **Energy Storage:** Rechargeable cell on the existing SiSmaK electronics
 - **Power Management:** Inductive DC-DC conversion with configurable operating parameters
 - **Piezoelectric Input:** External piezoelectric transducer connection via MHF4 connector
 - **System Interface:** FPC connection to the existing SiSmaK electronics
@@ -18,13 +18,11 @@ The project covers schematic design, component selection, piezoelectric AC-DC re
 
 ### Piezoelectric Energy Harvesting
 
-The module converts the alternating electrical output of an external piezoelectric transducer into usable DC energy.
+The receiver's AC output is rectified before entering the AEM30300. LTspice studies of pump capacitance and load were used to assess its suitability for this application.
 
-A **Greinacher voltage doubler** consisting of Schottky diodes and capacitors rectifies the piezoelectric signal before it is supplied to the AEM30300 energy harvesting IC.
+The **Greinacher voltage doubler** raises the available DC voltage, while the AEM30300 and external inductor transfer energy to storage. Its ZMPP setting adjusts the effective resistive load at the rectifier output. Because rectifier behavior and source impedance depend on excitation, this setting was evaluated experimentally rather than inferred from the piezo's nominal resonance alone.
 
-The AEM30300 manages the harvested energy through its integrated power management circuitry and an external inductor.
-
-The module is designed for a battery-based energy harvesting architecture, allowing harvested energy to be stored and subsequently used to supply the SiSmaK electronics.
+The battery buffers surplus energy and supports the existing supply. Unlike the capacitor architecture, this direct-supply variant does not delay load connection until storage has fully charged.
 
 ### SiSmaK Integration
 
@@ -34,7 +32,7 @@ The piezoelectric transducer is connected through a dedicated input connector, w
 
 ## PCB Design
 
-The PCB was designed using **KiCad 9**, including schematic capture, component placement, and PCB routing.
+The approximately 13 mm, four-layer PCB was designed in **KiCad 9**. Single-sided component placement limits assembly height; the MHF4 input and FPC interface connect the external receiver and existing SiSmaK electronics.
 
 ### PCB View
 
@@ -60,8 +58,9 @@ The KiCad schematic and PCB design files are included for further inspection.
 
 ## Project Status
 
-PCB design documented. Manufacturing and hardware validation status are not specified here.
+The thesis reports storage-charging experiments and SMU load sweeps using piezos bonded to metallic test specimens (§5.3.1). Output exceeded **600 µW at 16 Vpp transmitter drive with 7.2 kΩ ZMPP** in the tested configuration. Narrow frequency maxima and different cold-start/normal-operation load optima made both frequency and load tuning important.
 
+The supply could not start the MCU from empty storage under the investigated low-power conditions. Higher excitation was limited by the AEM30300 input-voltage rating; the thesis reports damage when rectified voltage exceeded 5.5 V without additional protection.
 ---
 
 **Author:** Alexander Richter  
